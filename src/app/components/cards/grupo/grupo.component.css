@@ -1,0 +1,13 @@
+.cards{
+  display: inline-block;
+}
+.conteudo-secundario-titulo {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  font-family: 'Righteous', cursive;
+  font-weight: 400;
+  font-size: 30px;
+  color: #000000;
+  display: flex;
+  justify-content: center;
+}

@@ -57,7 +57,7 @@ body{
 
   .conteudo {
     margin-bottom: 48px;
-    
+
   }
 
 
@@ -67,14 +67,14 @@ body{
     align-items: center;
     justify-content: space-around;
   }
-  
+
   .conteudo-secundario {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 21px;
   }
-  
+
   .conteudo-secundario-titulo {
     padding-top: 50px;
     font-family: 'Righteous', cursive;
@@ -82,7 +82,7 @@ body{
     font-size: 30px;
     color: var(--preto-principal);
   }
-  
+
   .conteudo-secundario-paragrafo {
     font-family: 'Sarala', sans-serif;
     font-weight: 300;
@@ -97,11 +97,9 @@ body{
    color: var(--branco-principal) !important;
    background-color: aliceblue;
   }
-   
+
+.center{
+  text-align: center;
+}
 
 
-
-  
-  
-
-  

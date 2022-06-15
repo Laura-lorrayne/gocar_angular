@@ -1,17 +1,18 @@
+<app-header></app-header>
 <main >
   <div id="login">
       <div class="container">
           <div id="login-row" class="row justify-content-center align-items-center">
               <div id="login-column" class="col-md-6">
-                  <div id="login-box" class="col-md-12">
+                  <div id="login-box" class="col-md-12" style="padding: 80px;">
                       <form [formGroup]="formLogin">
                           <h3 class="text-center text-warning">Login</h3>
                           <div class="form-group">
-                              <label for="username" class="text-dark">Usuario:</label><br>
+                              <label for="username" class="text-white">Usuario:</label><br>
                               <input type="text" name="username" id="username" class="form-control" formControlName="username">
                           </div>
                           <div class="form-group">
-                              <label for="password" class="text-dark">Senha:</label><br>
+                              <label for="password" class="text-white">Senha:</label><br>
                               <input type="text" name="password" id="password" class="form-control" formControlName="password">
                           </div>
                           <div class="btn">

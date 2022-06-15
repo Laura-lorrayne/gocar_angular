@@ -1,0 +1,37 @@
+<app-header></app-header>
+
+<main class="conteudo">
+    <section class="conteudo-secundario">
+      <h3 class="conteudo-secundario-titulo">Conheça a nossa frota</h3>
+      <p class="conteudo-secundario-paragrafo">As melhores condições para você reservar e aproveitar</p>
+    </section>
+
+    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+        <div class="container" style="width: 35%; min-height: 30%;">
+        <div class="row">
+            <div id="demo" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner center-block" >
+          <div *ngFor="let carro of carros, let i = index">
+            <div class="carousel-item {{active(i)}}" data-bs-interval="3000">
+              <img src="{{carro.imagem}}" class="d-block w-100" alt="{{carro.nome}}">
+              <div class="texto-carrosel">
+                <h4>First slide label</h4>
+                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+      </div>
+    </div>
+
+  </div>
+</main>

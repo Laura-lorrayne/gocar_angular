@@ -1,0 +1,14 @@
+
+  <app-header></app-header>
+
+  <div class="container mx-auto mt-4">
+    <div class="row">
+      <h3 class="conteudo-primario-titulo">Catálogo</h3>
+    </div>
+
+    <div class="row" *ngIf="grupos.length > 0" >
+      <div class="col-12" *ngFor="let grupo of grupos" >
+        <grupo-carro [grupo]="grupo"></grupo-carro>
+      </div>
+    </div>
+  </div>

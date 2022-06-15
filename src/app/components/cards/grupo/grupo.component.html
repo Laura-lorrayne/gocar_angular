@@ -1,0 +1,8 @@
+<div class="row">
+  <h3 class="conteudo-secundario-titulo  center">{{titleGrupo}}</h3>
+</div>
+<div class="row">
+  <div class="col-4" *ngFor="let carro of grupo" >
+    <card-carro [carro]="carro"></card-carro>
+  </div>
+</div>

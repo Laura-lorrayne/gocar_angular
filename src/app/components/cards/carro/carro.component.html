@@ -1,0 +1,30 @@
+
+  <div class="card" >
+      <div class="card-header">
+        <h5 class="card-title">{{carro?.nome}}</h5>
+      <div class="card-body">
+        <div class="flip-box">
+          <div class="flip-box-inner">
+              <div class="flip-box-front">
+                  <img src="{{carro?.imagem}}" class="card-img-top" alt="Gol">
+              </div>
+              <div class="flip-box-back">
+                <img src="../../assets/fundo.png" class="card-img-top" alt="Gol">
+
+                <div class="informacao_carro">
+                    <i class="fa-solid fa-user">  {{carro?.motor}}, {{manual}}</i> <br>
+                    <i class="fa-solid fa-business-time"> {{carro?.malas}} mala(s) pequena(s)</i>
+                    <i class="fa-solid fa-car"> Velocidade max: 182 km/h</i>
+                    <i class="fa-solid fa-gas-pump"> Flex - etanol / gasolina</i>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+        <p class="card-text">{{carro?.descricao}}</p>
+      </div>
+      <div class="card-footer">
+        <a (click)="simular()" class="card-button"> Simular Aluguel</a>
+      </div>
+  </div>
+

@@ -1,0 +1,55 @@
+<app-header></app-header>
+<div class="container" m-auto>
+  <br>
+  <div class="row">
+    <div class="col-12">
+      <main class="conteudo">
+        <div class="card">
+          <div class="card-header">
+            <img class="card-img-top" src="{{carro?.imagem}}" alt="Imagem de capa do card">
+          </div>
+          <div class="card-body">
+
+            <div class="row g-5">
+              <div class="col-12 center">
+                <h5>{{carro?.nome}}</h5>
+              </div>
+              <div class="col-12 mb-2">
+                <label for="firstName" class="form-label">Local de retirada</label>
+                <input type="text" class="form-control" id="firstName" placeholder="" value={{localRetirada()}} disabled>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-6  mb-2">
+                <label for="firstName" class="form-label">Data de retirada</label>
+                <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+              </div>
+              <div class="col-6 mb-2">
+                <label for="firstName" class="form-label">Horario de retirada</label>
+                <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+              </div>
+            </div>
+
+
+            <div class="row">
+              <div class="col-6 mb-2">
+                <label for="firstName" class="form-label">Data da devolução</label>
+                <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+              </div>
+              <div class="col-6 mb-2">
+                <label for="firstName" class="form-label">Horario da devolução</label>
+                <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+              </div>
+            </div>
+            <br>
+
+          </div>
+          <div class="card-footer m-4">
+            <a href="#" class="btn btn-primary">Simular</a>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+</div>

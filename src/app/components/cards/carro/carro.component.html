@@ -12,10 +12,21 @@
                 <img src="../../assets/fundo.png" class="card-img-top" alt="Gol">
 
                 <div class="informacao_carro">
-                    <i class="fa-solid fa-user">  {{carro?.motor}}, {{manual}}</i> <br>
-                    <i class="fa-solid fa-business-time"> {{carro?.malas}} mala(s) pequena(s)</i>
-                    <i class="fa-solid fa-car"> Velocidade max: 182 km/h</i>
-                    <i class="fa-solid fa-gas-pump"> Flex - etanol / gasolina</i>
+                  <div class="row">
+                    <div class="col-6">
+                      <i class="fa-solid fa-user">  {{carro?.motor}}, {{manual}}</i> <br>
+                      <i class="fa-solid fa-business-time"> {{carro?.malas}} mala(s) grande(s)</i>  <br>
+                      <i class="fa-solid fa-person"> {{carro?.assentos}} assentos</i> <br>    
+                      <i class="fa-solid fa-snowflake"> Ar condicionado: {{carro?.arcondicionado}} </i>             
+                    </div>
+                    <div class="col-6">
+                      <i class="fa-solid fa-brush"> cor: {{carro?.cor}}</i>  <br>
+                      
+                      <i class="fa-solid fa-car"> vidro eletrico: {{carro?.vidroEletrico}}</i> <br>
+                      <i class="fa-solid fa-exclamation"> ABS:  {{carro?.abs}}</i> <br>
+                      <i class="fa-solid fa-car-burst"> Airbag:  {{carro?.airbag}}</i>
+                    </div>
+                  </div>
                 </div>
               </div>
           </div>

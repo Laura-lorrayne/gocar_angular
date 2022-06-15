@@ -15,8 +15,8 @@
             <div class="carousel-item {{active(i)}}" data-bs-interval="3000">
               <img src="{{carro.imagem}}" class="d-block w-100" alt="{{carro.nome}}">
               <div class="texto-carrosel">
-                <h4>First slide label</h4>
-                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                <h4>{{carro?.nome}}</h4>
+                <p> O {{carro?.nome}}, traz seu melhor desempenho com um motor {{carro?.motor}} e m sua melhor performance da categoria. buscando o maior conforto com {{carro?.assentos}} assentos no seu interior e uma porta capaz de {{carro?.malas}}mala(s) grande(s). Venha garantir a sua reserva!</p>
               </div>
             </div>
           </div>

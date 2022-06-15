@@ -1,6 +1,7 @@
 import { CarroService } from 'src/app/services/carros/carros.service';
 import { Component, OnInit } from '@angular/core';
 import { Carro } from 'src/app/models/carro';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -12,6 +13,7 @@ export class HomeComponent implements OnInit {
   carros: Carro[] = [];
 
   constructor(
+    private router: Router,
     private carroService: CarroService
   ) { }
 

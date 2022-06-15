@@ -14,6 +14,8 @@ import { LoginComponent } from './components/login/login.component';
 import { SimularComponent } from './components/simular/simular.component';
 import { CarroService } from './services/carros/carros.service';
 import { ContatoComponent } from './components/contato/contato.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { LocalStorageService } from './services/localstorage/localstorage';
 
 
 
@@ -34,12 +36,15 @@ import { ContatoComponent } from './components/contato/contato.component';
 
   ],
   imports: [
+    FormsModule,
+    ReactiveFormsModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule
   ],
   providers: [
-    CarroService
+    CarroService,
+    LocalStorageService
   ],
   bootstrap: [AppComponent]
 })

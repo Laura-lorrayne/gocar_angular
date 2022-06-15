@@ -1,128 +1,122 @@
 <app-header></app-header>
-
-        <br>
-
-
-      
-    
-            <div class="container">
-              <main>
-            
-                <div class="row g-5">
-                    <div class="col-md-7 col-lg-8">
-                    <h4 class="mb-3">Cadastro de Usuario</h4>
-                        <form class="needs-validation" novalidate>
-                        <div class="row g-3">
-                            <div class="col-sm-12">
-                            <label for="firstName" class="form-label">Nome</label>
-                            <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
-                            <div class="invalid-feedback">
-                                Valid first name is required.
-                            </div>
-                            </div>
-                            <div class="col-sm-6">
-                            <label for="firstName" class="form-label">CPF</label>
-                            <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
-                            <div class="invalid-feedback">
-                                Valid first name is required.
-                            </div>
-                            </div>
-                            <div class="col-sm-6">
-                            <label for="firstName" class="form-label">RG</label>
-                            <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
-                            <div class="invalid-feedback">
-                                Valid first name is required.
-                            </div>
-                            </div>
-
-                            <div class="col-12">
-                            <label for="email" class="form-label">Email <span class="text-muted"></span></label>
-                            <input type="email" class="form-control" id="email" placeholder="you@example.com" required>
-                            <div class="invalid-feedback">
-                                Please enter a valid email address for shipping updates.
-                            </div>
-                            </div>
-                            <div class="col-12">
-                                <label for="address2" class="form-label">Referencia <span class="text-muted"></span></label>
-                                <input type="text" class="form-control"  placeholder="(99) 99999-9999" required>
-                            </div>
-                            <div class="col-6">
-                                <label for="address2" class="form-label">Bairro <span class="text-muted"></span></label>
-                                <input type="text" class="form-control"  required>
-                            </div>
-                            <div class="col-6">
-                                <label for="address2" class="form-label">Numero da casa <span class="text-muted"></span></label>
-                                <input type="text" class="form-control" required>
-                            </div>
-                
-                            <div class="col-12">
-                            <label for="address" class="form-label">Endereço</label>
-                            <input type="text" class="form-control" id="address" placeholder="1234 Main St" required>
-                            <div class="invalid-feedback">
-                                Please enter your shipping address.
-                            </div>
-                            </div>
-                
-                            <div class="col-12">
-                            <label for="address2" class="form-label">Telefone <span class="text-muted"></span></label>
-                            <input type="text" class="form-control" id="address2" placeholder="(99) 99999-9999" required>
-                            </div>
-                
-                            <div class="col-md-3">
-                                <div class="form-label">
-                                    <label for="state">Estado</label>
-                                    <select multiple class="form-control" id="state">
-                                        <option value="">Selecione</option>
-                                        <option>Acre</option>
-                                        <option>Alagoas</option>
-                                        <option>Amapá</option>
-                                        <option>Amazonas</option>
-                                        <option>Bahia</option>
-                                        <option>Ceará</option>
-                                        <option>Espírito Santo</option>
-                                        <option>Goiás</option>
-                                        <option>Maranhão</option>
-                                        <option>Mato Grosso</option>
-                                        <option>Mato Grosso do Sul</option>
-                                        <option>Minas Gerais</option>
-                                        <option>Pará</option>
-                                        <option>Paraíba</option>
-                                        <option>Paraná</option>
-                                        <option>Pernambuco</option>
-                                        <option>Piauí</option>
-                                        <option>Rio de Janeiro</option>
-                                        <option>Rio Grande do Norte</option>
-                                        <option>Rio Grande do Sul</option>
-                                        <option>Rondônia</option>
-                                        <option>Roraima</option>
-                                        <option>Santa Catarina</option>
-                                        <option>São Paulo</option>
-                                        <option>Sergipe</option>
-                                        <option>Tocantins</option>
-                                        <option>Distrito Federal</option>
-                                    </select>
-                                </div>
-                            </div>  
-                            
-                            <div class="col-6">
-                                <label for="address2" class="form-label">Senha <span class="text-muted"></span></label>
-                                <input type="password" class="form-control"  required>
-                            </div>
-                            <div class="col-6">
-                                <label for="address2" class="form-label">Confirmar senha <span class="text-muted"></span></label>
-                                <input type="password" class="form-control" required>
-                            </div>
-                           
-                            <button class="w-100 btn btn-primary btn-lg" type="submit">Finalizar cadastro</button>
-                        </div>
-                        </form>
-                    </div>
+<main>
+  <div class="container pt-5 mt-5">
+    <div class="row g-5">
+        <div class="col-md-7 col-lg-8">
+        <h4 class="mb-3">Cadastro de Usuario</h4>
+            <form [formGroup]="formCadastro" novalidate>
+            <div class="row g-3">
+                <div class="col-sm-12">
+                <label for="name" class="form-label">Nome</label>
+                <input type="text" class="form-control" id="name" placeholder="" value="" formControlName="name">
+                <div class="invalid-feedback">
+                    Valid first name is required.
                 </div>
-              </main>
+                </div>
+                <div class="col-sm-6">
+                <label for="cpf" class="form-label">CPF</label>
+                <input type="text" class="form-control" id="cpf" placeholder="" value="" formControlName="cpf">
+                <div class="invalid-feedback">
+                    Valid first name is required.
+                </div>
+                </div>
+                <div class="col-sm-6">
+                <label for="firstName" class="form-label">RG</label>
+                <input type="text" class="form-control" id="rg" placeholder="" value="" formControlName="rg">
+                <div class="invalid-feedback">
+                    Valid first name is required.
+                </div>
+                </div>
+
+                <div class="col-12">
+                  <label for="email" class="form-label">Email <span class="text-muted"></span></label>
+                  <input type="email" class="form-control" id="email" placeholder="you@example.com" formControlName="email">
+                  <div class="invalid-feedback">
+                      Please enter a valid email address for shipping updates.
+                  </div>
+                </div>
+
+
+                <div class="col-6">
+                  <label for="password" class="form-label">Senha <span class="text-muted"></span></label>
+                  <input type="password" class="form-control" id="password" formControlName="password">
+                  <div class="invalid-feedback">
+                      Please enter a valid email address for shipping updates.
+                  </div>
+                </div>
+
+
+                <div class="col-6">
+                  <label for="confirmpassword" class="form-label">Confirme sua senha <span class="text-muted"></span></label>
+                  <input type="password" class="form-control" id="confirmpassword" formControlName="confirmpassword">
+                  <div class="invalid-feedback">
+                      Please enter a valid email address for shipping updates.
+                  </div>
+                </div>
+
+                <div class="col-12">
+                    <label for="referencia" class="form-label">Referencia <span class="text-muted"></span></label>
+                    <input type="text" class="form-control" id="referencia" formControlName="referencia">
+                </div>
+                <div class="col-6">
+                    <label for="bairro" class="form-label">Bairro <span class="text-muted"></span></label>
+                    <input type="text" class="form-control" id="bairro" formControlName="bairro">
+                </div>
+                <div class="col-6">
+                    <label for="numero" class="form-label">Numero da casa <span class="text-muted"></span></label>
+                    <input type="text" class="form-control" id="numero" formControlName="numero">
+                </div>
+
+                <div class="col-12">
+                <label for="endereco" class="form-label">Endereço</label>
+                <input type="text" class="form-control" id="endereco" formControlName="endereco" placeholder="1234 Main St">
+                <div class="invalid-feedback">
+                    Please enter your shipping address.
+                </div>
+                </div>
+
+                <div class="col-12">
+                <label for="telefone" class="form-label">Telefone <span class="text-muted"></span></label>
+                <input type="text" class="form-control" id="telefone" formControlName="telefone" placeholder="(99) 99999-9999">
+                </div>
+
+                <div class="col-md-12">
+                  <label for="state">Estado</label>
+                  <select class="form-control" id="state" formControlName="state">
+                      <option value="" disabled>Selecione</option>
+                      <option value="Acre">Acre</option>
+                      <option value="Alagoas">Alagoas</option>
+                      <option value="Amapá">Amapá</option>
+                      <option value="Amazonas">Amazonas</option>
+                      <option value="Bahia">Bahia</option>
+                      <option value="Ceará">Ceará</option>
+                      <option value="Espírito Santo">Espírito Santo</option>
+                      <option value="Goiás">Goiás</option>
+                      <option value="Maranhão">Maranhão</option>
+                      <option value="Mato Grosso">Mato Grosso</option>
+                      <option value="Mato Grosso do Sul">Mato Grosso do Sul</option>
+                      <option value="Minas Gerais">Minas Gerais</option>
+                      <option value="Pará">Pará</option>
+                      <option value="Paraíba">Paraíba</option>
+                      <option value="Paraná">Paraná</option>
+                      <option value="Pernambuco">Pernambuco</option>
+                      <option value="Piauí">Piauí</option>
+                      <option value="Rio de Janeiro">Rio de Janeiro</option>
+                      <option value="Rio Grande do Norte">Rio Grande do Norte</option>
+                      <option value="Rio Grande do Sul">Rio Grande do Sul</option>
+                      <option value="Rondônia">Rondônia</option>
+                      <option value="Roraima">Roraima</option>
+                      <option value="Santa Catarina">Santa Catarina</option>
+                      <option value="São Paulo">São Paulo</option>
+                      <option value="Sergipe">Sergipe</option>
+                      <option value="Tocantins">Tocantins</option>
+                      <option value="Distrito Federal">Distrito Federal</option>
+                  </select>
+                </div>
+                <button class="w-100 btn btn-primary btn-lg" type="submit" (click)="cadastrar()">Finalizar cadastro</button>
             </div>
-
-    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
-
-      
- 
-
+            </form>
+        </div>
+    </div>
+  </div>
+</main>

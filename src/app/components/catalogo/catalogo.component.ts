@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Carro } from 'src/app/models/carro';
 import { CarroService } from 'src/app/services/carros/carros.service';
+import { LocalStorageService } from 'src/app/services/localstorage/localstorage';
 
 @Component({
   selector: 'app-catalogo',
@@ -13,12 +15,26 @@ export class CatalogoComponent implements OnInit {
   grupos: Carro[][] = [];
 
   constructor(
-    private carroService: CarroService
+    private carroService: CarroService,
+    private router: Router,
+    private storage: LocalStorageService
   ) { }
 
   ngOnInit(): void {
-    console.log('Catalogo')
-    this.listAll();
+    if(!this.usuarioLogado()){
+      this.router.navigate(['home']);
+    } else {
+      this.listAll();
+    }
+  }
+
+  usuarioLogado(): boolean{
+    try{
+      let usuario =  JSON.parse(this.storage.get('usuario'));
+      return usuario.id ? true : false;
+    } catch(e){
+      return false;
+    }
   }
 
   save(): void {

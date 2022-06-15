@@ -10,7 +10,6 @@ import { environment } from 'src/environments/environment';
 })
 export class ClienteService {
 
-
   constructor(
     private httpClient: HttpClient
   ) {
@@ -19,7 +18,7 @@ export class ClienteService {
 
   apiUrl: string = environment.apiUrlBase + '/clientes/';
 
-  save(obj: Cliente) : Observable<Cliente> {
+  save(obj: any) : Observable<Cliente> {
     return this.httpClient.post<Cliente>(`${this.apiUrl}` ,obj);
   }
 
@@ -37,5 +36,9 @@ export class ClienteService {
 
   getById(id: number):  Observable<Cliente>  {
     return this.httpClient.get<Cliente>(`${this.apiUrl}${id}/`);
+  }
+
+  login(username: any, password: any) {
+    return this.httpClient.get<Cliente[]>(`${this.apiUrl}?email=${username}&senha=${password}`);
   }
 }

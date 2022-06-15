@@ -9,44 +9,50 @@
             <img class="card-img-top" src="{{carro?.imagem}}" alt="Imagem de capa do card">
           </div>
           <div class="card-body">
+            <form [formGroup]="formSimular">
+              <div class="form-group row g-5">
+                <div class="col-12 center">
+                  <h5>{{carro?.nome}}</h5>
+                </div>
+                <div class="col-12 mb-2">
+                  <label for="firstName" class="form-label">Local de retirada</label>
+                  <input type="text" class="form-control" formControlName="localRetirada" id="firstName" placeholder="" [value]="localRetirada">
+                </div>
+              </div>
 
-            <div class="row g-5">
-              <div class="col-12 center">
-                <h5>{{carro?.nome}}</h5>
+              <div class="row">
+                <div class="col-6  mb-2">
+                  <label for="firstName" class="form-label">Data de retirada</label>
+                  <input type="date" class="form-control" id="dataRetirada"  formControlName="dataRetirada">
+                </div>
+                <div class="col-6 mb-2">
+                  <label for="firstName" class="form-label">Horario de retirada</label>
+                  <input type="time" class="form-control" id="horaRetirada" placeholder="" value="" required formControlName="horaRetirada">
+                </div>
               </div>
-              <div class="col-12 mb-2">
-                <label for="firstName" class="form-label">Local de retirada</label>
-                <input type="text" class="form-control" id="firstName" placeholder="" value={{localRetirada()}} disabled>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="col-6  mb-2">
-                <label for="firstName" class="form-label">Data de retirada</label>
-                <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
-              </div>
-              <div class="col-6 mb-2">
-                <label for="firstName" class="form-label">Horario de retirada</label>
-                <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
-              </div>
-            </div>
 
 
-            <div class="row">
-              <div class="col-6 mb-2">
-                <label for="firstName" class="form-label">Data da devolução</label>
-                <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+              <div class="row">
+                <div class="col-6 mb-2">
+                  <label for="firstName" class="form-label">Data da devolução</label>
+                  <input type="date" class="form-control" id="dataDevolucao" formControlName="dataDevolucao">
+                </div>
+                <div class="col-6 mb-2">
+                  <label for="firstName" class="form-label">Horario da devolução</label>
+                  <input type="time" class="form-control" id="horaDevolucao" placeholder="" value="" required formControlName="horaDevolucao">
+                </div>
               </div>
-              <div class="col-6 mb-2">
-                <label for="firstName" class="form-label">Horario da devolução</label>
-                <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+              <br>
+              <div class="row">
+                <div class="col-12 mb-2">
+                  <label for="firstName" class="form-label">Valor</label>
+                  <input type="text" class="form-control" id="valor" formControlName="valor" [value]="valor()">
+                </div>
               </div>
-            </div>
-            <br>
-
+            </form>
           </div>
           <div class="card-footer m-4">
-            <a href="#" class="btn btn-primary">Simular</a>
+            <a class="btn btn-primary" disabled="formValid()" (click)="alugar()" >Alugar</a>
           </div>
         </div>
       </main>

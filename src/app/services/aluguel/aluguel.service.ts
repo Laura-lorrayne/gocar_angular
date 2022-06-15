@@ -19,7 +19,7 @@ export class AluguelService {
 
   apiUrl: string = environment.apiUrlBase + '/alugueis/';
 
-  save(obj: Aluguel) : Observable<Aluguel> {
+  save(obj: any) : Observable<Aluguel> {
     return this.httpClient.post<Aluguel>(`${this.apiUrl}` ,obj);
   }
 

@@ -7,16 +7,16 @@
     </section>
 
     <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-        <div class="container" style="width: 35%; min-height: 30%;">
+        <div class="container" style="width: 35%;">
         <div class="row">
             <div id="demo" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner center-block" >
           <div *ngFor="let carro of carros, let i = index">
             <div class="carousel-item {{active(i)}}" data-bs-interval="3000">
-              <img src="{{carro.imagem}}" class="d-block w-100" alt="{{carro.nome}}">
+              <img src="{{carro.imagem}}" class="d-block w-100 " height="400"  alt="{{carro.nome}}"  >
               <div class="texto-carrosel">
                 <h4>{{carro?.nome}}</h4>
-                <p> O {{carro?.nome}}, traz seu melhor desempenho com um motor {{carro?.motor}} e m sua melhor performance da categoria. buscando o maior conforto com {{carro?.assentos}} assentos no seu interior e uma porta capaz de {{carro?.malas}}mala(s) grande(s). Venha garantir a sua reserva!</p>
+                <p> O {{carro?.nome}}, traz seu melhor desempenho com um motor {{carro?.motor}} em sua melhor performance da categoria. Buscando o maior conforto com {{carro?.assentos}} assentos no seu interior e uma porta malas capaz de {{carro?.malas}}mala(s) grande(s). <strong> Venha garantir a sua reserva! </strong></p>
               </div>
             </div>
           </div>

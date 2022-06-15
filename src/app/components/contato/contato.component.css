@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Sarala:wght@400;700&display=swap');
+:root{
+  --amarelo-principal: #FFFF00;
+  --amarelo-secundario: #FFFACD;
+  --preto-principal: #000000;
+  --branco-principal: #FFFAFA;
+  }
+
+  .conteudo {
+    margin-bottom: 48px;
+
+  }
+
+ 
+  .info {
+    font-size: 15px;
+    text-align: center;
+    justify-items: center
+  }
+  .mapa {
+    display: flex;
+    align-items: center;
+    justify-content: center ;
+    border: 0;
+    height: 800px;
+    width: 600px;
+  }
+
+
+
+
+
+
+
+

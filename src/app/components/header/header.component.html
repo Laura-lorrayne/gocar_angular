@@ -7,14 +7,14 @@
         <img src="../../assets/logoPequena.png" alt="logo"width="120" height="48"class="d-inline-block align-text-top ">
       </div>
       <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-        <li><a (click)="go('catalogo')" class="nav-link px-2 text-white">Catálogo</a></li>
         <li><a (click)="go('home')" class="nav-link px-2 text-white">Home</a></li>
-        <li><a href="../contatos/contatos.html" class="nav-link px-2 text-white">Contatos</a></li>
+        <li><a (click)="go('catalogo')" class="nav-link px-2 text-white">Catálogo</a></li>
+        <li><a (click)="go('contato')" class="nav-link px-2 text-white">Contatos</a></li>
       </ul>
 
       <div class="text-end">
-        <button type="button" class="btn btn-outline-light me-2">Login</button>
-        <button type="button" class="btn btn-warning">cadastrar</button>
+        <button (click)="go('login')" type="button" class="btn btn-outline-light me-2">Login</button>
+        <button (click)="go('cadastrar')" type="button" class="btn btn-outline-light me-2">Cadastrar</button>
       </div>
     </div>
     <div  class="col-3"></div>

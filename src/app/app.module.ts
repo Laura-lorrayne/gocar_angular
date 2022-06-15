@@ -13,6 +13,8 @@ import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { SimularComponent } from './components/simular/simular.component';
 import { CarroService } from './services/carros/carros.service';
+import { ContatoComponent } from './components/contato/contato.component';
+
 
 
 
@@ -27,7 +29,8 @@ import { CarroService } from './services/carros/carros.service';
     FooterComponent,
     HeaderComponenent,
     CardCarroComponenent,
-    GrupoComponenent
+    GrupoComponenent,
+    ContatoComponent
 
   ],
   imports: [

@@ -112,8 +112,12 @@
 .texto-carrosel p{
   color: #FFFFFF;
   font-size: 1.1rem;
+  padding: 20px;
+  text-align: justify;
 }
 
-
+.img{
+  
+}
 
 

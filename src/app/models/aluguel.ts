@@ -1,7 +1,7 @@
 import { Time } from "@angular/common";
 
 export class Aluguel {
-  id!: number;
+  id!: any;
   idCliente!: number;
   idCarro!: number;
   idFornecedor!: number;

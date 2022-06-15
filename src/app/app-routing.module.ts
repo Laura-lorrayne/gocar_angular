@@ -1,11 +1,11 @@
-import { ContatoComponent } from './components/contato/contato.component';
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
-import { CadastroComponent } from "./components/cadastro/cadastro.component";
 import { CatalogoComponent } from "./components/catalogo/catalogo.component";
 import { HomeComponent } from "./components/home/home.component";
 import { LoginComponent } from "./components/login/login.component";
 import { SimularComponent } from "./components/simular/simular.component";
+import { CadastroComponent } from './components/cadastro/cadastro.component';
+import { ContatoComponent } from "./components/contato/contato.component";
 
 
 
@@ -16,6 +16,7 @@ const routes: Routes = [
     { path: 'login', component: LoginComponent},
     { path: 'cadastrar', component: CadastroComponent},
     { path: 'contato', component: ContatoComponent},
+    { path: '', component: HomeComponent}
 ];
 
 @NgModule({

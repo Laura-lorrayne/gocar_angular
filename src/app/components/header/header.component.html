@@ -6,15 +6,16 @@
       <div class="logo bg-dark">
         <img src="../../assets/logoPequena.png" alt="logo"width="120" height="48"class="d-inline-block align-text-top ">
       </div>
-      <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+      <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0" *ngIf="usuarioLogado()" >
         <li><a (click)="go('home')" class="nav-link px-2 text-white">Home</a></li>
         <li><a (click)="go('catalogo')" class="nav-link px-2 text-white">Catálogo</a></li>
         <li><a (click)="go('contato')" class="nav-link px-2 text-white">Contatos</a></li>
       </ul>
 
       <div class="text-end">
-        <button (click)="go('login')" type="button" class="btn btn-outline-light me-2">Login</button>
-        <button (click)="go('cadastrar')" type="button" class="btn btn-outline-light me-2">Cadastrar</button>
+        <a type="button" class="btn btn-outline-light me-2" *ngIf="!usuarioLogado()"  (click)="go('login')">Login</a>
+        <a type="button" class="btn btn-outline-light me-2" *ngIf="usuarioLogado()"  (click)="logout()">Logout</a>
+        <a type="button" class="btn btn-warning" *ngIf="!usuarioLogado()" (click)="go('cadastrar')">cadastrar</a>
       </div>
     </div>
     <div  class="col-3"></div>

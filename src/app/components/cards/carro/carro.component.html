@@ -16,15 +16,15 @@
                     <div class="col-6">
                       <i class="fa-solid fa-user">  {{carro?.motor}}, {{manual}}</i> <br>
                       <i class="fa-solid fa-business-time"> {{carro?.malas}} mala(s) grande(s)</i>  <br>
-                      <i class="fa-solid fa-person"> {{carro?.assentos}} assentos</i> <br>    
-                      <i class="fa-solid fa-snowflake"> Ar condicionado: {{carro?.arcondicionado}} </i>             
+                      <i class="fa-solid fa-person"> {{carro?.assentos}} assentos</i> <br>
+                      <i class="fa-solid fa-snowflake" *ngIf="carro?.arcondicionado" >Ar condicionado</i>
                     </div>
                     <div class="col-6">
-                      <i class="fa-solid fa-brush"> cor: {{carro?.cor}}</i>  <br>
-                      
-                      <i class="fa-solid fa-car"> vidro eletrico: {{carro?.vidroEletrico}}</i> <br>
-                      <i class="fa-solid fa-exclamation"> ABS:  {{carro?.abs}}</i> <br>
-                      <i class="fa-solid fa-car-burst"> Airbag:  {{carro?.airbag}}</i>
+                      <i class="fa-solid fa-brush"> Cor: {{carro?.cor}}</i>  <br>
+
+                      <i class="fa-solid fa-car" *ngIf="carro?.vidroEletrico">Vidro eletrico</i> <br>
+                      <i class="fa-solid fa-exclamation" *ngIf="carro?.abs">ABS</i> <br>
+                      <i class="fa-solid fa-car-burst" *ngIf="carro?.airbag" >Airbag</i>
                     </div>
                   </div>
                 </div>
